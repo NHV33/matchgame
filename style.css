@@ -1,0 +1,294 @@
+html {
+    background-color: darkslategray;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+dialog {
+  margin-top: 10vmin;
+  user-select: none;
+  text-align: center;
+  color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 1px black;
+  z-index: 10;
+  /* width: 70vmin; */
+  /* height: 70vmin; */
+  background-color: darkslategrey;
+  border-style: outset;
+  border-color:peachpuff;
+  border-width: 5px;
+  border-radius: 5px;
+  padding: 3vmin;
+}
+
+dialog::backdrop {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  background-color: black;
+  opacity: 88%;
+}
+
+.arrow-button {
+  height: 4vmin;
+  width: 4vmin;
+  background-color: darkred;
+  border-style: outset;
+  border-color: darkred;
+  border-width: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.arrow-button:hover {
+  background-color: rgb(176, 0, 0);
+}
+
+.arrow-button:active {
+  /* background-color: rgb(176, 0, 0); */
+  border-style: inset;
+}
+
+.option {
+  text-align: center;
+  height: 4vmin;
+  width: 4vmin;
+  color:white;
+  font-family: monospace;
+  font-size: 4vmin;
+  background-color: darkgoldenrod;
+  border-color: darkgoldenrod;
+  border-style: outset;
+  border-width: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.arrow-button img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4vmin;
+  width: 4vmin;
+}
+
+#new-game {
+  margin-top: 3vmin;
+  font-size: 3vmin;
+}
+
+#play-again {
+  margin-top: 3vmin;
+  font-size: 3vmin;
+}
+
+#settings {
+  margin-top: 2vmin;
+  height: 8vmin;
+  width: 8vmin;
+  padding: 1vmin;
+}
+
+#settings img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.button {
+  color:white;
+  font-weight: bolder;
+  /* background-color: darkred; */
+  border-style: outset;
+  /* border-color: darkred; */
+  border-width: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.button.red:hover {
+  background-color: rgb(176, 0, 0);
+}
+
+.button.green:hover {
+  background-color: rgb(0, 176, 0);
+}
+
+.button.yellow:hover {
+  background-color: goldenrod;
+}
+
+.button:active {
+   border-style: inset;
+}
+
+main {
+    width: 90vmin;
+    height: 90vmin;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* align-content: center; */
+    align-items: center;
+    /* background-color: black; */
+}
+
+.flex {
+    display: flex;
+}
+
+.stacked-col {
+    flex-flow: column;
+    flex-wrap: nowrap;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #game-board {
+    width: 90vmin !important;
+    flex-wrap: wrap;
+    background-color: aqua !important;
+} */
+
+#players {
+    /* background-color: aquamarine; */
+    width: 100%;
+    /* margin-bottom: .5vmin; */
+}
+
+
+
+.player {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 8vmin;
+    /* height: 8vmin; */
+    border-style: solid;
+    border-width: 5px;
+    padding: .5vmin;
+    color: white;
+    font-size: 5.5vmin;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 33%;
+    transform: scale(.25);
+    /* display: none; */
+    margin: -3.5vmin;
+}
+
+.player.active {
+    display: block;
+    opacity: 100%;
+    margin: 2vmin;
+    /* transform: scale(1); */
+    border-style: outset;
+    /* text-shadow: 0 0 2vmin pink; */
+    animation: grow 200ms linear 0s 1 forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes grow {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+
+.red {
+  border-color:darkred;
+  background-color: darkred;
+}
+
+.blue {
+  border-color:darkblue;
+  background-color: darkblue;
+}
+
+.green {
+  border-color:darkgreen;
+  background-color: darkgreen;
+}
+
+.yellow {
+  border-color: darkgoldenrod;
+  background-color: darkgoldenrod;
+}
+
+#header {
+    color:white;
+    font-size: 6vmin;
+    white-space: nowrap;
+    margin: 3vmin;
+}
+
+#displayCard {
+    width: 27.5vmin;
+    height: 40vmin;
+}
+
+.card {
+    transform: translateY(0px);
+    width: 11vmin;
+    height: 16vmin;
+    margin: 0.2vmin;
+    /* background-image: url("svg/10_of_clubs.svg"); */
+    background-size: contain;
+    /* background-color: aliceblue; */
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-image: url("svg/card_back.svg") !important;
+    color:purple;
+    text-shadow: 1px 1px 2px black;
+    font-size: larger;
+}
+
+.face {
+    transform: rotate3d(0, 1, 0, -90deg);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.card:hover {
+    animation: slide-up 100ms linear 0s 1 forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+/* .card-container:active {
+    animation: flip 400ms linear 0s 1 forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+} */
+
+@keyframes slide-up {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(-.2vmin);}
+}
+
+@keyframes flip-back {
+    0% {transform: rotate3d(0);}
+    100% {transform: rotate3d(0, 1, 0, 90deg);}
+}
+
+@keyframes flip-face {
+    0% {transform: rotate3d(0, 1, 0, -90deg);}
+    100% {transform: rotate3d(0, 1, 0, 0deg);}
+}

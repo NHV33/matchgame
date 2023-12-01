@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <title>Hello, world!</title> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <!-- <link rel="icon" href="favicon.png"> -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <dialog>
+    <button id="cancel" class="flex center button red">✕</button>
+    <h2>Settings</h2>
+    <p>Number of Players</p>
+    <div class="flex center">
+      <div id="player-left" class="arrow-button" control="players" increment="-1">
+        <img src="png/arrow-left.png" alt="">
+      </div>
+      <div id="players-option" class="option flex center">2</div>
+      <div id="player-right" class="arrow-button" control="players" increment="1">
+        <img src="png/arrow-right.png" alt="">
+      </div>
+    </div>
+    <p>Number of Cards</p>
+    <div class="flex center">
+      <div id="cards-left" class="arrow-button" control="cards" increment="-1">
+        <img src="png/arrow-left.png" alt="">
+      </div>
+      <div id="cards-option" class="option flex center">12</div>
+      <div id="cards-right" class="arrow-button" control="cards" increment="1">
+        <img src="png/arrow-right.png" alt="">
+      </div>
+    </div>
+    <div class="flex center">
+      <button id="new-game" class="flex center button green">New Game</button>
+    </div>
+  </dialog>
+  <dialog id="win-screen">
+    <h1 id="win-message"></h1>
+    <div class="flex center">
+      <button id="play-again" class="flex center button green">Play Again</button>
+    </div>
+  </dialog>
+  <main id="main">
+    <div id="players" class="flex center">
+      <div id="p1" class="player">
+        <div class="player-id">P1</div>
+        <div id="p1-score" class="player-score">0</div>
+      </div>
+    </div>
+    <table>
+      <tbody id="game-board">
+      </tbody>
+    </table>
+    <button id="settings" class="flex center button yellow">
+      <img src="png/gear.png" alt="Settings">
+    </button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
